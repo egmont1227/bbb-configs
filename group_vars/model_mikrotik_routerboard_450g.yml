@@ -1,0 +1,22 @@
+---
+override_target: "nand-large"
+openwrt_version: 19.07-SNAPSHOT
+target: ar71xx/mikrotik
+
+switch_ports: 5
+switch_int_port: 0
+switch_ignore_ports: []
+
+int_port: eth0
+
+feed_version: 1.2.2-snapshot
+
+model__packages__to_merge:
+  - "-px5g-wolfssl"
+  - "-hostapd-wolfssl"
+  - "-prometheus-node-exporter-lua-hostapd_stations"
+  - "-prometheus-node-exporter-lua-hostapd_ubus_stations"
+  - "-prometheus-node-exporter-lua-snmp6"
+  - "-luci-app-babeld"
+  - "-collectd-mod-dhcpleases"
+  - "-olsrd-utils"
